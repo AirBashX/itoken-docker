@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<localRepository>E:/文档/maven/repository</localRepository>
+	<pluginGroups>
+	</pluginGroups>
+	<proxies>
+	</proxies>
+	<servers>
+		<server>
+			<id>nexus</id>
+			<username>admin</username>
+			<password>abc.123</password>
+		</server>
+	</servers>
+	<mirrors>
+<!-- 		<mirror>
+			<id>aliyunmaven</id>
+			<mirrorOf>*</mirrorOf>
+			<name>私服仓库</name>
+			<url>http://192.168.111.141:8081/repository/maven-public/</url>
+		</mirror> -->
+		<mirror>
+			<id>aliyunmaven</id>
+			<mirrorOf>*</mirrorOf>
+			<name>阿里云公共仓库</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+		</mirror>
+	</mirrors>
+	<profiles>
+<!-- 		<profile>
+			<id>maven-nexus</id>
+			<repositories>
+				<repository>
+					<id>nexus</id>
+					<name>Nexus Release Repository</name>
+					<url>http://192.168.111.141:8081/repository/maven-releases</url>
+					<releases>true</releases>
+				</repository>
+			</repositories>
+		</profile> -->
+    </profiles>
+</settings>
