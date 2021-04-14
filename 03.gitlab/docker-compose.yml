@@ -1,8 +1,8 @@
-version: '3.1'
+version: '3.6'
 services:
    gitlab:
       image: 'gitlab/gitlab-ce'
-      container_name: 'gitlab_ce'
+      container_name: 'gitlab'
       privileged: true
       hostname: 'www.airbash.cn'
       ports:
@@ -10,6 +10,11 @@ services:
         - '8443:443'
         - '2222:22'
       volumes:
-        - /usr/local/docker/gitlab/config:/etc/gitlab
-        - /usr/local/docker/gitlab/data:/var/opt/gitlab
-        - /usr/local/docker/gitlab/logs:/var/log/gitlab
+        - $HOME/docker/gitlab/config:/etc/gitlab
+        - $HOME/docker/gitlab/data:/var/opt/gitlab
+        - $HOME/docker/gitlab/logs:/var/log/gitlab
+      deploy:
+        resources:
+          limits:
+            memory: 2.5G
+              
